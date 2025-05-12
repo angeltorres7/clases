@@ -2,7 +2,7 @@
 class armas:
     def __init__(self, cañon, culata, cargador, mira, empuñadura):#Definimos los atributos
        #Ponemos los atributos con el self
-        self.cañon = cañon
+       self.cañon = cañon
        self.culata = culata
        self.cargador = cargador
        self.mira = mira
