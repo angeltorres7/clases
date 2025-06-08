@@ -1,17 +1,31 @@
-#primero creamos un clase
-class armas:
-    def __init__(self, cañon, culata, cargador, mira, empuñadura):#Definimos los atributos
-       #Ponemos los atributos con el self
-       self.cañon = cañon
-       self.culata = culata
-       self.cargador = cargador
-       self.mira = mira
-       self.empuñadura = empuñadura
+# Clase base Figura con un método area que se espera que sea sobreescrito por las subclases
+class Figura:
+    def area(self):
+        return()  # Método base sin implementación real
 
-#Completamos el codigo
-ladra = armas ("reforzado", "pesada", "ampliado 1", "mira opv4", "desenfundado rapido")
-print(ladra.cañon)
-print(ladra.empuñadura)
-#En programación, una clase es una plantilla o modelo para crear objetos. Define las características (atributos) y el comportamiento (métodos) que tendrán los objetos creados a partir de esa clase. Es un concepto fundamental en la programación orientada a objetos 
+# Clase Circulo que hereda de Figura
+class Circulo(Figura):
+    def __init__(self, radio):
+        self.radio = radio  # Se guarda el radio del círculo
+    def area(self):
+        # Fórmula del área de un círculo: π * radio^2 (usando 3.14 como valor aproximado de π)
+        return 3.14 * self.radio ** 2
 
-#Torres Perez Roberto Angel
+# Clase Rectangulo que hereda de Figura
+class Rectangulo(Figura):
+    def __init__(self, base, altura):
+        self.base = base      # Se guarda la base del rectángulo
+        self.altura = altura  # Se guarda la altura del rectángulo
+    def area(self):
+        # Fórmula del área de un rectángulo: base * altura
+        return self.base * self.altura
+
+# Lista de figuras: un círculo y un rectángulo
+figuras = [Circulo(30), Rectangulo(15, 10)]
+
+# Se recorre la lista y se imprime el área de cada figura
+for figura in figuras:
+    print(f"El área de la figura es {figura.area()}")
+
+
+#Torres Pérez Roberto Angel 
