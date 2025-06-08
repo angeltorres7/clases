@@ -28,4 +28,4 @@ for figura in figuras:
     print(f"El área de la figura es {figura.area()}")
 
 
-#Torres Pérez Roberto Angel 
+#Torres Pérez Roberto Angel k
